@@ -8,7 +8,10 @@ transactionRouter.get('/',(req,res) =>{
 })
 
 transactionRouter.post('/',(req,res) =>{
+    req.body.id = transactionData[transactionData.length -1].id + 1
+
     transactionData.push(req.body)
+    
     res.json(transactionData[transactionData.length -1])
 })
 
