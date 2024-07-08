@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/', (req,res) => {
-    res.send('joe')
+    res.json('The main page')
 })
 
 app.use('/transaction', transactionRouter)
